@@ -1,11 +1,7 @@
-This repo contains UMA (Unified Model of Arithmetic) version 0.600. This version of UMA is substantively identical to the version (0.550) used for simulations submitted to Psychological Review in September 2022. Changes were made to make the code easier to understand (e.g., editing comments for clarity, deleting imports and functions that are no longer used) but no changes were made that affect the functioning of the model or simulations.
+This repo contains the simulation code, simulation output, R data, and R scripts that are referenced in "A Unified Model of Arithmetic", submitted by Braithwaite and Siegler to Psychological Review in March 2023.
 
-uma.py contains UMA's architecture and several production rules that are to be included in any UMA model.
+The subfolder "1. Model" contains the simulation code and simulation output. 
 
-models.py contains the production rules used by the full model used in the reported simulations. To see the model in action on a few sample problems, uncomment and run one or more of the examples at the end of this file. 
+The subfolder "2. Analysis" contains the R data and R scripts.
 
-Alternate models can be constructed by creating alternate rule sets (for example, subsets of the rules in models.py). This is illustrated in the last two examples, which use a modified version of the model that (unlike the default model) cannot commit errors in single digit whole number addition or multiplication.
-
-simulators.py contains code for running simulations using the model specified by uma.py and models.py. The code at the bottom specifies the simulations whose results were reported in the paper. The Simulation class is capable of running a wide variety of other simulations. 
-
-The simulations take a long time to run and occasionally crash. If this happens, you can resume from the point at which the crash occurred by setting a value other than 0 for start_subjid in the call to Simulation.run.
+Each subfolder contains its own README with more detailed information about its contents.
