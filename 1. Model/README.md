@@ -1,4 +1,4 @@
-This folder contains UMA (Unified Model of Arithmetic) version 0.600. This version of UMA is substantively identical to the version (0.550) used for simulations submitted to Psychological Review in September 2022. Changes were made to make the code easier to understand (e.g., editing comments for clarity, deleting imports and functions that are no longer used) but no changes were made that affect the functioning of the model or simulations.
+This folder contains UMA (Unified Model of Arithmetic) version 0.600. This version of UMA is substantively identical to the version (0.550) used for simulations whose results are described in the submission to Psychological Review. Changes were made to make the code easier to understand (e.g., editing comments for clarity, deleting imports and functions that are no longer used) but no changes were made that affect the functioning of the model or simulations.
 
 The three files in the same folder as this README constitute the model itself. 
 
