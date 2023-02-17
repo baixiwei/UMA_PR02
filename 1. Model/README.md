@@ -8,12 +8,4 @@ The three files in the same folder as this README constitute the model itself.
 
 > simulators.py contains code for running simulations using the model specified by uma.py and models.py. The code at the bottom specifies the simulations whose results were reported in the paper. The Simulation class is capable of running a wide variety of other simulations. The simulations take a long time to run and occasionally crash. If this happens, you can resume from the point at which the crash occurred by setting a value other than 0 for start_subjid in the call to Simulation.run.
 
-The Output subfolder contains the output from simulators.py that was reported in the submission to Psychological Review.
-
-> The subfolder ALL29_BCD contains the raw output of the simulations (one file per simulated participant per assessment per grade).
-
-> The file "sim all29_BCD.csv" contains the results of calling Simulation.mergeResults on the contents of the subfolder "ALL29_BCD", namely, a single file containing all assessment results of all simulated participants.
-
-> Note that the column names of the above files are slightly different from what you would get from a fresh run of the simulations. The reason is that the simulation output was generated using UMA 0.550 rather than 0.600 - see the first paragraph of this README.
-
 The subfolders "Problem Sets Training" and "Problem Sets Testing" contain, respectively, the problem sets that were used to train and test UMA. These files are used by simulators.py to run simulations.
