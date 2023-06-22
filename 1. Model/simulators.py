@@ -450,13 +450,26 @@ class Simulation():
         X = X.sort_values(by=['notation', 'grade', 'test', 'subjid'])
         X.to_csv(os.path.abspath(os.getcwd()) + "\\Output\\sim " + name + ".csv")
 
-ps      = {
-   'g':     [.01, .02, .03, .04, .05, .06, .07, .08, .09, .10],
-   'd':     [.1, .3, .5, .7, .9],
-   'c':     [5],
-   'rt_mu': [3, 4, 5, 6],
-   'rt_sd': [1],
-   'ice':   [0, 25, 50, 75, 100]}
-S = Simulation("ALL29_BCD", params_sets=ps, rules=all_rules, N=1, curriculum="full")
-S.run()
-Simulation.mergeResults("ALL29_BCD")
+# # Uncomment these lines to run the full simulations
+# ps      = {
+   # 'g':     [.01, .02, .03, .04, .05, .06, .07, .08, .09, .10],
+   # 'd':     [.1, .3, .5, .7, .9],
+   # 'c':     [5],
+   # 'rt_mu': [3, 4, 5, 6],
+   # 'rt_sd': [1],
+   # 'ice':   [0, 25, 50, 75, 100]}
+# S = Simulation("ALL29_BCD", params_sets=ps, rules=all_rules, N=1, curriculum="full")
+# S.run()
+# Simulation.mergeResults("ALL29_BCD")
+
+# # Uncomment these lines to run a simulation with one simulated student
+# ps      = {
+   # 'g':     [.05],
+   # 'd':     [.3],
+   # 'c':     [5],
+   # 'rt_mu': [5],
+   # 'rt_sd': [1],
+   # 'ice':   [50]}
+# S = Simulation("XXX", params_sets=ps, rules=all_rules, N=1, curriculum="full")
+# S.run()
+# Simulation.mergeResults("XXX")
