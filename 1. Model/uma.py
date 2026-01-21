@@ -384,9 +384,9 @@ class Number(Chunk):
     def __int__(self):
         try:
             return(int(str(self)))
-        except:
+        except Exception as e:
             # print("Cannot convert Number to int: %s" % str(self))
-            return
+            raise TypeError(f"Cannot convert Number to int: {str(self)}") from e
     def __float__(self):
         try:
             if self.features['subtype']=='fraction':
@@ -395,9 +395,9 @@ class Number(Chunk):
                 return(float(self.features['whole']) + float(self.features['fraction']))
             else:
                 return(float(str(self)))
-        except:
+        except Exception as e:
             # print("Cannot convert Number to float: %s" % str(self)) # comment out for long sims
-            return
+            raise TypeError(f"Cannot convert Number to float: {str(self)}") from e
     def increment(self, by=1):
         try:
             if self.features['subtype']=="whole":
@@ -1004,7 +1004,7 @@ class Rule:
         except:
             print("Error in Rule.match:", sys.exc_info())
             print("Goal: ")
-            print(str(goal))
+            print(str(self.goal))
             print("Conds: ")
             for c in self.conds:
                 print(str(c))
